@@ -55,11 +55,10 @@ body {
   -webkit-background-clip: text;
   color: transparent;
   letter-spacing: 3px;
-  transition: all 0.2s;
+  transition: all 0.3s;
 
   &:hover {
     transform: skewX(13deg) scale(1.1);
-    transition-duration: 0.5s;
     text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
   }
 }
