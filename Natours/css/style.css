@@ -12,7 +12,8 @@
     transform: translateX(40rem); }
   100% {
     opacity: 1;
-    transform: translate(0); } }
+    transform: translate(0);
+    visibility: visible; } }
 
 @keyframes moveInBottom {
   0% {
@@ -64,9 +65,8 @@ body {
     width: 100%;
     letter-spacing: 1.75rem;
     margin-left: 0.87rem;
-    animation-name: moveInRight;
-    animation-duration: 2s;
-    animation-timing-function: ease-out; }
+    visibility: hidden;
+    animation: moveInRight 2s ease-in-out 1.5s 1 normal forwards; }
 
 .heading-secondary {
   font-size: 3.5rem;
@@ -81,7 +81,8 @@ body {
   letter-spacing: 3px;
   transition: all 0.2s; }
   .heading-secondary:hover {
-    transform: skewY(-5deg) skewX(13deg) scale(1.1);
+    transform: skewX(13deg) scale(1.1);
+    transition-duration: 0.5s;
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
 
 .heading-tertiary {
