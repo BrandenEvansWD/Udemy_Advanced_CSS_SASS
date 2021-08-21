@@ -1,0 +1,49 @@
+.card {
+  //set high perpestive for clean rotation
+  perspective: 150rem;
+  position: relative;
+  // fix for height collapse from absolute positioned element below
+  height: 50rem;
+
+  &__side {
+    color: white;
+    font-size: 2rem;
+    //height property is collapsed so is added to .card to fix
+    height: 50rem;
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    //fill grid-column
+    width: 100%;
+    //hide card display when turned
+    backface-visibility: hidden;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+
+    &--front {
+      background-color: $color-white;
+    }
+
+    &--back {
+      //card begins in rotated state for the back-view
+      transform: rotateY(180deg);
+
+      &-1 {
+        background-image: linear-gradient(
+          to bottom right,
+          $color-orange-light,
+          $color-orange-dark
+        );
+      }
+    }
+  }
+
+  &:hover &__side--front {
+    transform: rotateY(180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+}
