@@ -4,11 +4,13 @@
   "description": "Landing page for natours",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/style.scss css/style.css -w"
+    "compile:sass": "sass sass/style.scss css/style.css -w",
+    "prefix": "postcss css/style.css --use autoprefixer -d css/prefixed"
   },
   "author": "Branden Evans",
   "license": "ISC",
+  "browserslist": "last 4 versions",
   "devDependencies": {
-    "node-sass": "^6.0.1"
+    "sass": "^6.0.1"
   }
 }
