@@ -15,9 +15,6 @@
   "browserslist": "last 4 versions",
   "devDependencies": {
     "del-cli": "^4.0.1",
-    "sass": "^6.0.1"
-  },
-  "dependencies": {
     "node-sass": "^6.0.1"
   }
 }
